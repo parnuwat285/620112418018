@@ -1,0 +1,9 @@
+version: '3'
+
+services: 
+    ssh:
+      image: rastasheep/ubuntu-sshd
+      ports: 
+        - ${SSH_CLI_PORT}:${SSH_HOST_PORT}
+      volumes: 
+        - ./home:/home
